@@ -1,0 +1,54 @@
+.minter {
+  text-align: center;
+}
+
+.minter > h1 {
+  margin-top: 2rem;
+  font-weight: 2.3rem;
+  font-weight: 900;
+}
+
+.gif {
+  margin-top: 7rem;
+}
+
+.count {
+  margin-top: .5rem;
+}
+
+.input-space {
+  margin: 2rem 0;
+}
+
+.input-space input {
+  padding: .5rem 1rem;
+  width: 15rem;
+}
+
+.input-space p {
+  font-size: 1.1rem;
+}
+
+.mint-btn {
+  margin-bottom: 4rem;
+  width: 20rem;
+  padding: .7rem 0;
+  background-color: #3A3A3A;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-family: inherit;
+  font-size: 1rem;
+  border-radius: .2rem;
+  letter-spacing: .08rem;
+  cursor: pointer;
+}
+
+.mint-btn:hover {
+  background-color: #3a3a3aaf;
+}
+
+.fake-footer {
+  background-color: #F9CDE4;
+  height: 5rem
+}

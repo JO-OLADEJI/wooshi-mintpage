@@ -1,0 +1,64 @@
+.nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  padding: 1.5rem 7rem;
+  box-shadow: 0 1px 5px #00000045;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav-btns {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.social-links i {
+  font-size: 1.6rem;
+  margin-right: 1.5rem;
+  cursor: pointer;
+}
+
+.connect-btn {
+  transition: color .3s ease-in-out;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: .8rem;
+  padding: .5rem 1rem;
+  background-color: transparent;
+  letter-spacing: .01rem;
+  font-weight: 600;
+  font-size: .85rem;
+  font-family: cursive;
+}
+
+.connect-btn:hover {
+  background-color: transparent;
+}
+
+.connect-btn p {
+  margin-right: .5rem;
+  font-family: cursive;
+}
+
+.connect-btn i {
+  font-size: 1.5rem;
+  margin-left: .5rem;
+}

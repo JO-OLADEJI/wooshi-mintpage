@@ -1,10 +1,13 @@
 import React from 'react';
 import styles from './App.module.css';
+import Nav from './components/Nav.jsx';
+import Minter from './components/Minter.jsx';
 
 function App() {
   return (
     <div className={styles['App']}>
-      <h1>Wooshi Mint Page</h1>
+      <Nav />
+      <Minter />
     </div>
   );
 }
