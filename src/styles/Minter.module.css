@@ -52,3 +52,12 @@
   background-color: #F9CDE4;
   height: 5rem
 }
+
+
+.warning,
+.warning p,
+.warning a {
+  color: red;
+  font-family: cursive;
+  font-size: .8rem;
+}

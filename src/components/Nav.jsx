@@ -17,9 +17,21 @@ const Nav = (props) => {
         />
       </div>
       <div className={styles['nav-btns']}>
-        <button className={styles['connect-btn']}>
-          Connect Wallet
-          <i className="fab fa-ethereum" />
+        <button 
+          className={styles['connect-btn']}
+          onClick={async (e) => props.connectWallet(e)}>
+          {props.walletAddress.length > 0 ? (
+          <p>{"Connected: " +
+          String(props.walletAddress).substring(0, 6) +
+          "..." +
+          String(props.walletAddress).substring(38)}
+          </p>
+        ) : (
+          <>
+            <p>Connect Wallet</p>
+            <i className="fab fa-ethereum" />
+          </>
+        )}
         </button>
       </div>
     </div>

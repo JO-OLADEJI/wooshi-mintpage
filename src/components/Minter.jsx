@@ -4,10 +4,6 @@ import wooshiGif from '../assets/wooshi-gif.gif';
 
 const Minter = (props) => {
 
-  const mintHandler = (e) => {
-    e.preventDefault();
-  }
-
   return (
     <div className={styles['minter']}>
       <h1>Mint-a-wooshi</h1>
@@ -18,12 +14,13 @@ const Minter = (props) => {
       />
       <p className={styles['count']}>0/11111</p>
       <div className={styles['input-space']}>
+        <div className={styles['warning']}>{props.warning}</div>
         <input type="number" min="1" max="20" step="1"/>
         <p>PRICE: 0.11 + GAS - MAX 20 PER TX</p>
       </div>
       <button 
         className={styles['mint-btn']}
-        onClick={(e) => mintHandler(e)}>
+        onClick={(e) => props.mintNFT(e)}>
         MINT
       </button>
       <div className={styles['fake-footer']} />
