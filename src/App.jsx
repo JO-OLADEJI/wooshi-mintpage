@@ -54,10 +54,10 @@ function App() {
     setWallet(walletResponse.address);
   };
 
-  const mintBtnPressed = async (event) => {
+  const mintBtnPressed = async (event, mintAmount) => {
     event.preventDefault();
-    const result = await mintNFT();
-    setStatus(<p>{result.status}</p>);
+    const result = await mintNFT(mintAmount);
+    result.success ? setStatus('Mint successful ✔') : setStatus('An error occured ❌');
   }
 
 

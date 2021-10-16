@@ -23,6 +23,8 @@
 .input-space input {
   padding: .5rem 1rem;
   width: 15rem;
+  font-weight: bold;
+  text-align: center;
 }
 
 .input-space p {

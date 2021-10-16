@@ -7,7 +7,7 @@
 
 # testing
 /coverage
-/src/metadata
+/src/metadata/
 
 # production
 /build

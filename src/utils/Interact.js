@@ -6,7 +6,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(alchemyKey);
 
 const contractABI = require('../contract-abi.json');
-const contractAddress = "0x1474C30C8997334f92072235BC31BE6eC7a90fc4";
+const contractAddress = "0x3b3241c5f0Fdd559a43C6fCDEB4967b784257f03";
 
 // wallet connection
 export const connectWallet = async () => {
@@ -95,7 +95,7 @@ export const getCurrentWalletConnected = async () => {
 
 
 // function to handle minting the nft
-export const mintNFT = async () => {
+export const mintNFT = async (noOfTokens) => {
 
   // -> make pinata call
   const pinataResponse = await pinJSONToIPFS(metadata);
@@ -116,7 +116,7 @@ export const mintNFT = async () => {
   const transactionParameters = {
     to: contractAddress, // Required except during contract publications.
     from: window.ethereum.selectedAddress, // must match user's active address.
-    'data': window.contract.methods.mintNFT(window.ethereum.selectedAddress, tokenURI).encodeABI(), //make call to NFT smart contract 
+    'data': window.contract.methods.mintNFT(window.ethereum.selectedAddress, tokenURI, noOfTokens).encodeABI(), //make call to NFT smart contract 
     value: '186CC6ACD4B0000' // require address to pay 0.11 ethers <value encoded to hex>
   };
 
